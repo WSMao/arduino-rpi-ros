@@ -1,0 +1,16 @@
+<launch>
+
+  <group ns="arduino1">
+    <node pkg="rosserial_python" name="sim" type="serial_node.py" args="/dev/ttyACM0"   />
+  </group>
+
+  <group ns="arduino2">
+    <node pkg="rosserial_python" name="sim2" type="serial_node.py" args="/dev/ttyACM1"  />
+  </group>
+
+
+</launch>
+
+
+
+
