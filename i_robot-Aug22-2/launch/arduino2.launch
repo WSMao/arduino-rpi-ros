@@ -1,0 +1,7 @@
+<launch>
+
+<node ns="Mega_one" name="arduino_one" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" />
+
+<node ns="Mega_two" name="arduino_two" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM1" />
+
+</launch>
