@@ -1,0 +1,30 @@
+<launch>
+
+	<node  name="arduino_one"   pkg="rosserial_python" type="serial_node.py"  args="/dev/ttyACM0" />
+	<node  name="arduino_two"   pkg="rosserial_python" type="serial_node2.py" args="/dev/ttyACM1" />
+	<node  name="arduino_three" pkg="rosserial_python" type="serial_node3.py" args="/dev/ttyACM2" />
+	<node  name="arduino_four"  pkg="rosserial_python" type="serial_node4.py" args="/dev/ttyACM3" />
+	<node  name="arduino_five"  pkg="rosserial_python" type="serial_node5.py" args="/dev/ttyACM4" />
+	<node  name="arduino_six"   pkg="rosserial_python" type="serial_node6.py" args="/dev/ttyACM5" />
+
+	<!-- <node pkg="i_robot" type="main_executable" name="main_node" output="screen"/>   -->
+    <node pkg="i_robot" type="controller_executable" name="controller_node" output="screen" />  
+
+    <node pkg="joy" type="joy_node" name="joy_node" output="screen" />
+       <rosparam>
+          dev: /dev/input/js0
+          deadzone: 0.2
+       </rosparam>   
+		
+     
+
+
+</launch>
+
+
+
+
+
+
+
+
